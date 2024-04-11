@@ -7,9 +7,9 @@ export const projectsData = [
     {
         id: 1,
         name: 'Product Monitoring System',
-        description: "I developed a sophisticated system designed to monitor and alert on product updates across various e-commerce sites. This backend-focused solution was engineered using Python, with Selenium for web scraping, demonstrating seamless interaction with dynamic web content. The Key features include automated notification delivery through Discord webhooks, proxy management for anonymous requests, and the strategic use of threading to optimize performance. This project highlight my skills in backend development, showcasing innovative application of web scraping techniques and automation to facilitate real-time data monitoring.",
-        tools: ['Python', 'Selenium',  'Discord Webhooks', 'Threading'],
-        role: 'Backend Developer',
+        description: "I developed a system designed to monitor and alert on product updates across various e-commerce sites. This backend-focused solution was engineered using Python, with Selenium for web scraping, demonstrating seamless interaction with dynamic web content. The Key features include automated notification delivery through Discord webhooks, proxy management for anonymous requests. This project highlight my skills in backend development, showcasing innovative application of web scraping techniques and automation to facilitate real time data monitoring.",
+        tools: ['Python', 'Selenium',  'Discord Webhooks'],
+        role: 'Full Stack Developer',
         code: '',
         demo: '',
         image: crefin,

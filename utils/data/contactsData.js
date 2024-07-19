@@ -1,7 +1,7 @@
 export const contactsData = {
     email: 'dev@michael-gonaus.xyz',
     phone: '+436642138582',
-    address: 'Middle Badda, Dhaka, Bangladesh - 1212 ',
+    address: '',
     github: 'https://github.com/said7388',
     facebook: 'https://www.facebook.com/abusaid.riyaz/',
     linkedIn: 'https://www.linkedin.com/in/abu-said-bd/',

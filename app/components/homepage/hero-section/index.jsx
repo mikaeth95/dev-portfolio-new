@@ -82,21 +82,13 @@ function HeroSection() {
                 <span className="text-gray-400">{`['`}</span>
                 <span className="text-amber-300">HTML</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">CSS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">SASS</span>
-                <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">JavaScript</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">React</span>
+                <span className="text-amber-300">Selenium</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Python</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Golang</span>
-                <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Git</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Django</span>
                 <span className="text-gray-400">{"'],"}</span>
               </div>
               <div>

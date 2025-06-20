@@ -32,6 +32,7 @@ function HeroSection() {
           </h1>
 
           <div className="my-12 flex items-center gap-5">
+            {/* 
             <Link
               href={personalData.github}
               target='_blank'
@@ -39,7 +40,9 @@ function HeroSection() {
             >
               <BsGithub size={30} />
             </Link>
+            */}
           </div>
+
 
           <div className="flex items-center gap-3">
             <Link href="#contact" className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
@@ -84,12 +87,12 @@ function HeroSection() {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">JavaScript</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Selenium</span>
+                <span className="text-amber-300">TypeScript</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Python</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Git</span>
-                <span className="text-gray-400">{"'],"}</span>
+                <span className="text-amber-300">MySQL</span>
+                <span className="text-gray-400">{"',"}</span>
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>

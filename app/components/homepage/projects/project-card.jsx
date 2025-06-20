@@ -1,8 +1,24 @@
+"use client";
+
 // @flow strict
 
 import * as React from 'react';
+import { useState } from 'react';
 
 function ProjectCard({ project }) {
+  // Only enable slideshow if images are in array
+  const images = Array.isArray(project.image)
+    ? project.image
+    : project.image
+    ? [project.image]
+    : [];
+  const [current, setCurrent] = useState(0);
+
+  const lastIndex = images.length - 1;
+
+  const prevImage = () => setCurrent((prev) => (prev === 0 ? lastIndex : prev - 1));
+  const nextImage = () => setCurrent((prev) => (prev === lastIndex ? 0 : prev + 1));
+  const selectImage = (idx) => setCurrent(idx);
 
   return (
     <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
@@ -10,6 +26,7 @@ function ProjectCard({ project }) {
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
         <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
       </div>
+
       <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
         <div className="flex flex-row space-x-1 lg:space-x-2 absolute top-1/2 -translate-y-1/2">
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-red-400"></div>
@@ -20,6 +37,7 @@ function ProjectCard({ project }) {
           {project.name}
         </p>
       </div>
+
       <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
@@ -30,42 +48,79 @@ function ProjectCard({ project }) {
           </div>
           <div>
             <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
-            <span className="text-gray-400">{`'`}</span>
+            <span className="text-gray-400">'</span>
             <span className="text-amber-300">{project.name}</span>
-            <span className="text-gray-400">{`',`}</span>
+            <span className="text-gray-400">',</span>
           </div>
-
           <div className="ml-4 lg:ml-8 mr-2">
-            <span className=" text-white">tools:</span>
-            <span className="text-gray-400">{` ['`}</span>
-            {
-              project.tools.map((tag, i) => (
-                <React.Fragment key={i}>
-                  <span className="text-amber-300">{tag}</span>
-                  {
-                    project.tools.length - 1 !== i &&
-                    <span className="text-gray-400">{`', '`}</span>
-                  }
-                </React.Fragment>
-              ))
-            }
-            <span className="text-gray-400">{"],"}</span>
+            <span className="text-white">tools:</span>
+            <span className="text-gray-400">[</span>
+            {project.tools.map((tag, i) => (
+              <React.Fragment key={i}>
+                <span className="text-amber-300">'{tag}'</span>
+                {i < project.tools.length - 1 && <span className="text-gray-400">, </span>}
+              </React.Fragment>
+            ))}
+            <span className="text-gray-400">],</span>
           </div>
           <div>
             <span className="ml-4 lg:ml-8 mr-2 text-white">myRole:</span>
-            <span className="text-orange-400">{project.role}</span>
+            <span className="text-orange-400">'{project.role}'</span>
             <span className="text-gray-400">,</span>
           </div>
           <div className="ml-4 lg:ml-8 mr-2">
-            <span className="text-white">Description:</span>
-            <span className="text-cyan-400">{' ' + project.description}</span>
+            <span className="text-white">description:</span>
+            <span className="text-cyan-400"> '{project.description}'</span>
             <span className="text-gray-400">,</span>
           </div>
-          <div><span className="text-gray-400">{`};`}</span></div>
+          <div><span className="text-gray-400">{'};'}</span></div>
         </code>
       </div>
+
+      {/* Slideshow */}
+      {images.length > 0 && (
+        <div className="px-4 lg:px-8 pb-6 flex flex-col items-center">
+          {/* Fixed-size image frame: */}
+          <div className="relative w-full h-72 flex justify-center items-center overflow-hidden rounded-lg bg-[#151940] p-4 group">
+            <button
+              onClick={prevImage}
+              className="absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full shadow-lg z-10"
+              aria-label="Previous image"
+              type="button"
+            >
+              &#8592;
+            </button>
+            <img
+              src={typeof images[current] === 'string' ? images[current] : images[current].src}
+              alt={`${project.name} screenshot ${current + 1}`}
+              className="w-full h-full object-cover rounded-lg shadow-md border border-[#1b2c68a0] transition-all duration-500 scale-[0.95] group-hover:scale-[0.97]"
+              style={{ display: 'block' }}
+            />
+            <button
+              onClick={nextImage}
+              className="absolute right-0 top-1/2 -translate-y-1/2 p-2 rounded-full shadow-lg z-10"
+              aria-label="Next image"
+              type="button"
+            >
+              &#8594;
+            </button>
+          </div>
+          {/* Indicator dots */}
+          <div className="flex gap-2 mt-2">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => selectImage(idx)}
+                className={`w-3 h-3 rounded-full border ${current === idx ? 'bg-[#16f2b3] border-[#16f2b3]' : 'bg-[#0a0d37] border-[#1b2c68a0]'}`}
+                aria-label={`Go to image ${idx + 1}`}
+                type="button"
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
-};
+}
 
 export default ProjectCard;

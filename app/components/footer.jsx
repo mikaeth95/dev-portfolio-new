@@ -10,7 +10,7 @@ function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm">
-            © Developer Portfolio by <Link target="_blank" href="https://www.linkedin.com/in/michael-gonaus-3a5931302/" className="text-[#16f2b3]">Michael Gonaus</Link>
+            © Developer Portfolio by <Link target="_blank" href="https://github.com/mikaeth95" className="text-[#16f2b3]">Michael Gonaus</Link>
           </p>
           {/* Removed the Star and Fork links */}
         </div>

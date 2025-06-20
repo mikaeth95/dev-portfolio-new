@@ -7,46 +7,44 @@ export const projectsData = [
     {
         id: 1,
         name: 'Product Monitoring System',
-        description: "I developed a system designed to monitor and alert on product updates across various e-commerce sites. This backend-focused solution was engineered using Python. Key features include automated notification delivery through Discord webhooks and effective management of request handling to ensure reliable performance. This project highlights my skills in backend development, showcasing innovative applications of web scraping techniques and automation to facilitate real-time data monitoring.",
-        tools: ['Python', 'Requests',  'Discord Webhooks'],
+        description: "I built a system to monitor product updates on different e-commerce sites in real time. To learn and compare, I wrote some monitors in Python and some in JavaScript so I could see which language worked better for this kind of automation. The system sends alerts through Discord webhooks whenever items come back in stock or when prices change. This project gave me practical experience with backend development, web scraping, automation and real time data monitoring.",
+        tools: ['Python', 'JavaScript'],
         role: 'Full Stack Developer',
         code: '',
         demo: '',
-        image: crefin,
+        image: [
+        '/image/product-monitor-1.png',
+        '/image/product-monitor-2.png',
+        '/image/product-monitor-3.png'
+        ]
     },
     {
         id: 2,
-        name: 'Proxy Management Dashboard',
-        description: 'I developed a Proxy Management Dashboard aimed at streamlining both user and admin tasks related to proxy management and oversight. The frontend architecture was realized through React, chosen for its dynamic UI capabilities and flexible state management, while being complemented by Tailwind CSS. The backend infrastructure leverages Node.js and Express, a combination that guarantees robust API functionality alongside secure authentication mechanisms. To accommodate diverse user requirements, the system was designed to support multiple user roles, each with distinct access privileges. A crucial aspect of the platform is the integration of Stripe for payment processing, enabling straightforward and secure transactions. MongoDB was employed for its adept data handling capabilities, ensuring the systems responsiveness and scalability.',
-        tools: ['NextJS', 'Tailwind CSS', "TypeScript", "MySQL", "Stripe"],
-        role: 'Full Stack Developer',
+        name: 'Checkout Automation Tool',
+        description: "A desktop automation tool designed to streamline the checkout process on various e-commerce and collectible sites. Built with Node.js and Electron. The app provides an interface for setting up automated tasks. It can add products to the cart, fill out checkout forms and complete purchases quickly and efficiently. Working on this project improved my skills in desktop application development with JavaScript and creating efficient solutions for real world automation challenges.",
+        tools: ['Node.js', 'Electron', 'JavaScript'],
         code: '',
+        role: 'Full Stack Developer',
         demo: '',
-        image: travel,
+        image: [
+        '/image/checkout-tool-1.png',
+        '/image/checkout-tool-2.png',
+        '/image/checkout-tool-3.png'
+        ]
     },
     {
         id: 3,
-        name: 'Custom Web Scraping Tools',
-        description: 'I developed a suite of custom web scraping tools designed to efficiently extract data from various websites. The project involves creating robust scraping scripts tailored to handle diverse site structures and dynamic content. To ensure seamless data extraction, I implemented advanced techniques to manage request rates, handle JavaScript-rendered content, and maintain anonymity.',
-        tools: ['Python', 'BeautifulSoup', 'Selenium', 'Requests', 'Pandas'],
+        name: 'Poker Bankroll Tracker',
+        description: "I built a desktop application to help poker players track and manage their bankroll over time. The app is developed in Python, using the customtkinter library for a modern user interface along with Pillow for image handling. Key features include managing poker sessions, tracking profits and losses, viewing analytics and handling bankroll adjustments. This project gave me practical experience with Python GUI development, state management and integrating multiple components into a single desktop tool.",
+        tools: ['Python', 'Pillow', 'Tkinter'],
         code: '',
         role: 'Full Stack Developer',
         demo: '',
-        image: realEstate,
+        image: [
+        '/image/poker-tracker1.png',
+        '/image/poker-tracker2.png',
+        '/image/poker-tracker3.png',
+        '/image/poker-tracker4.png'
+        ]
     },
 ];
-
-
-// Do not remove any property.
-// Leave it blank instead as shown below
-
-// {
-//     id: 1,
-//     name: '',
-//     description: "",
-//     tools: [],
-//     role: '',
-//     code: '',
-//     demo: '',
-//     image: crefin,
-// },

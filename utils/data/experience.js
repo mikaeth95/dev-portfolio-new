@@ -1,20 +1,20 @@
 export const experiences = [
   {
     id: 1,
-    title: 'Software Developer',
+    title: 'Fullstack Developer',
     company: "Various Discord Communities",
-    duration: "(2023 - Present)"
+    duration: "2023 - Present"
   },
   {
     id: 2,
-    title: "Proxy Dashboard (User + Admin) & Management",
-    company: "Secret Supply",
-    duration: "(Jun 2023 - Dec 2023)"
+    title: "Code and build something everyday",
+    company: "Personal Projects",
+    duration: "2023 - Present"
   },
   {
     id: 3,
-    title: "Code and build something everyday.",
-    company: "Self Employed",
-    duration: "(Jan 2023 - Present)"
+    title: "CS50",
+    company: "Harvard University",
+    duration: "2025 - Present"
   }
 ]
